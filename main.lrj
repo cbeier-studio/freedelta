@@ -151,7 +151,6 @@
 {"hash":209531603,"name":"tmainform.helpmenuitem.hint","sourcebytes":[68,105,115,112,108,97,121,32,116,104,101,32,105,110,100,101,120,32,111,102,32,104,101,108,112,32,116,111,112,105,99,115],"value":"Display the index of help topics"},
 {"hash":71079620,"name":"tmainform.helpaboutitem.caption","sourcebytes":[65,38,98,111,117,116],"value":"A&bout"},
 {"hash":68510366,"name":"tmainform.helpaboutitem.hint","sourcebytes":[83,104,111,119,32,118,101,114,115,105,111,110,32,97,110,100,32,115,121,115,116,101,109,32,105,110,102,111,114,109,97,116,105,111,110],"value":"Show version and system information"},
-{"hash":218146437,"name":"tmainform.opendialog.title","sourcebytes":[79,112,101,110,32,101,120,105,115,116,105,110,103,32,102,105,108,101],"value":"Open existing file"},
 {"hash":160200403,"name":"tmainform.savedialog.title","sourcebytes":[83,97,118,101,32,97,115],"value":"Save as"},
 {"hash":44302585,"name":"tmainform.selectdirectorydialog.title","sourcebytes":[83,101,108,101,99,116,32,100,97,116,97,32,100,105,114,101,99,116,111,114,121],"value":"Select data directory"},
 {"hash":15492990,"name":"tmainform.additem.caption","sourcebytes":[65,100,100,32,105,116,101,109,46,46,46],"value":"Add item..."},

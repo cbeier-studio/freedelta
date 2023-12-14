@@ -6,27 +6,28 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  Spin, SpinEx, LCLTranslator;
+  Spin, SpinEx, LCLTranslator, ExtCtrls, EditBtn;
 
 type
 
   { TKeyForm }
 
   TKeyForm = class(TForm)
-    ComboBoxOutputFormat: TComboBox;
-    LabelOutputFormat: TLabel;
-    PrintWidthLabel: TLabel;
-    OKButton: TButton;
     CancelButton: TButton;
+    ComboBoxOutputFormat: TComboBox;
+    EditTreatCharactersAsVariable: TEditButton;
+    EditUseNormalValues: TEditButton;
+    EditCharacterReliabilities: TEditButton;
+    EditKeyStates: TEditButton;
+    EditIncludeItems: TEditButton;
+    EditIncludeCharacters: TEditButton;
+    LabelOutputFormat: TLabel;
+    OKButton: TButton;
+    PanelButtons: TPanel;
+    PrintWidthLabel: TLabel;
     CheckBoxNoTabularKey: TCheckBox;
     CheckBoxNoBrackettedKey: TCheckBox;
     CheckBoxAddCharacterNumbers: TCheckBox;
-    EditIncludeCharacters: TEdit;
-    EditIncludeItems: TEdit;
-    EditKeyStates: TEdit;
-    EditCharacterReliabilities: TEdit;
-    EditUseNormalValues: TEdit;
-    EditTreatCharactersAsVariable: TEdit;
     EditHeading: TEdit;
     FloatSpinEditABASE: TFloatSpinEditEx;
     FloatSpinEditVARYWT: TFloatSpinEditEx;
@@ -44,12 +45,6 @@ type
     LabelTreatCharactersAsVariable: TLabel;
     LabelNumberOfConfirmatoryCharacters: TLabel;
     LabelHeading: TLabel;
-    SpeedButtonKeyStates: TSpeedButton;
-    SpeedButtonTreatCharactersAsVariable: TSpeedButton;
-    SpeedButtonUseNormalValues: TSpeedButton;
-    SpeedButtonCharacterReliabilities: TSpeedButton;
-    SpeedButtonIncludeItems: TSpeedButton;
-    SpeedButtonIncludeCharacters: TSpeedButton;
     SpinEditPrintWidth: TSpinEdit;
     SpinEditNumberOfConfirmatoryCharacters: TSpinEditEx;
     procedure ComboBoxOutputFormatChange(Sender: TObject);

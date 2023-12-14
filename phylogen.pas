@@ -6,24 +6,22 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  ExtCtrls, LCLTranslator;
+  ExtCtrls, LCLTranslator, EditBtn;
 
 type
 
   { TPhyloForm }
 
   TPhyloForm = class(TForm)
-    EditKeyStates: TEdit;
-    LabelKeyStates: TLabel;
-    OKButton: TButton;
     CancelButton: TButton;
-    EditExcludeItems: TEdit;
-    EditExcludeCharacters: TEdit;
+    EditKeyStates: TEditButton;
+    EditExcludeItems: TEditButton;
+    EditExcludeCharacters: TEditButton;
+    LabelKeyStates: TLabel;
     LabelExcludeItems: TLabel;
     LabelExcludeCharacters: TLabel;
-    SpeedButtonExcludeItems: TSpeedButton;
-    SpeedButtonExcludeCharacters: TSpeedButton;
-    SpeedButtonKeyStates: TSpeedButton;
+    OKButton: TButton;
+    PanelButtons: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure SpeedButtonExcludeCharactersClick(Sender: TObject);

@@ -6,20 +6,19 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  Spin, SpinEx, LCLTranslator, EditBtn;
+  Spin, SpinEx, LCLTranslator, EditBtn, ExtCtrls;
 
 type
 
   { TIntKeyForm }
 
   TIntKeyForm = class(TForm)
-    DirectoryEditImagePath: TDirectoryEdit;
-    LabelImagePath: TLabel;
-    OKButton: TButton;
     CancelButton: TButton;
-    EditIncludeCharacters: TEdit;
-    EditIncludeItems: TEdit;
-    EditCharacterReliabilities: TEdit;
+    DirectoryEditImagePath: TDirectoryEdit;
+    EditCharacterReliabilities: TEditButton;
+    EditIncludeItems: TEditButton;
+    EditIncludeCharacters: TEditButton;
+    LabelImagePath: TLabel;
     EditHeading: TEdit;
     FloatSpinEditVARYWT: TFloatSpinEditEx;
     FloatSpinEditRBASE: TFloatSpinEditEx;
@@ -29,9 +28,8 @@ type
     LabelRBASE: TLabel;
     LabelCharacterReliabilities: TLabel;
     LabelHeading: TLabel;
-    SpeedButtonCharacterReliabilities: TSpeedButton;
-    SpeedButtonIncludeItems: TSpeedButton;
-    SpeedButtonIncludeCharacters: TSpeedButton;
+    OKButton: TButton;
+    PanelButtons: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure SpeedButtonCharacterReliabilitiesClick(Sender: TObject);

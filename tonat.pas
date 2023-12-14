@@ -6,58 +6,49 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, Spin, LCLTranslator;
+  Buttons, Spin, LCLTranslator, EditBtn;
 
 type
 
   { TTonatForm }
 
   TTonatForm = class(TForm)
+    CancelButton: TButton;
+    CheckBoxOmitCharacterNumbers: TCheckBox;
     CheckBoxOmitFinalComma: TCheckBox;
     CheckBoxOmitComments: TCheckBox;
+    CheckBoxOmitInapplicables: TCheckBox;
     CheckBoxOmitInnerComments: TCheckBox;
+    CheckBoxOmitTypesettingMarks: TCheckBox;
+    CheckBoxReplaceAngleBrackets: TCheckBox;
+    CheckBoxTranslateImplicitValues: TCheckBox;
     ComboBoxOutputFormat: TComboBox;
-    EditReplaceSemicolonByComma: TEdit;
-    EditOmitLowerForCharacters: TEdit;
-    EditOmitPeriodForCharacters: TEdit;
-    EditOmitOrForCharacters: TEdit;
-    EditEmphasizeFeatures: TEdit;
-    EditNewParagraphsAtCharacters: TEdit;
-    EditItemSubheadings: TEdit;
-    EditLinkCharacters: TEdit;
-    EditExcludeItems: TEdit;
-    EditExcludeCharacters: TEdit;
+    EditEmphasizeFeatures: TEditButton;
+    EditExcludeCharacters: TEditButton;
+    EditExcludeItems: TEditButton;
     EditHeading: TEdit;
+    EditItemSubheadings: TEditButton;
+    EditLinkCharacters: TEditButton;
+    EditNewParagraphsAtCharacters: TEditButton;
+    EditOmitLowerForCharacters: TEditButton;
+    EditOmitOrForCharacters: TEditButton;
+    EditOmitPeriodForCharacters: TEditButton;
+    EditReplaceSemicolonByComma: TEditButton;
+    LabelEmphasizeFeatures: TLabel;
+    LabelExcludeCharacters: TLabel;
+    LabelExcludeItems: TLabel;
+    LabelHeading: TLabel;
+    LabelItemSubheadings: TLabel;
+    LabelLinkCharacters: TLabel;
+    LabelNewParagraphsAtCharacters: TLabel;
+    LabelOmitLowerForCharacters: TLabel;
+    LabelOmitOrForCharacters: TLabel;
+    LabelOmitPeriodForCharacters: TLabel;
     LabelOutputFormat: TLabel;
     LabelPrintWidth: TLabel;
     LabelReplaceSemicolonByComma: TLabel;
-    LabelOmitLowerForCharacters: TLabel;
-    LabelOmitPeriodForCharacters: TLabel;
-    LabelOmitOrForCharacters: TLabel;
-    LabelEmphasizeFeatures: TLabel;
-    LabelNewParagraphsAtCharacters: TLabel;
-    LabelItemSubheadings: TLabel;
-    LabelLinkCharacters: TLabel;
-    LabelExcludeItems: TLabel;
-    LabelExcludeCharacters: TLabel;
-    LabelHeading: TLabel;
     OKButton: TButton;
-    CancelButton: TButton;
-    CheckBoxReplaceAngleBrackets: TCheckBox;
-    CheckBoxOmitCharacterNumbers: TCheckBox;
-    CheckBoxOmitInapplicables: TCheckBox;
-    CheckBoxOmitTypesettingMarks: TCheckBox;
-    CheckBoxTranslateImplicitValues: TCheckBox;
-    SpeedButtonReplaceSemicolonByComma: TSpeedButton;
-    SpeedButtonOmitLowerForCharacters: TSpeedButton;
-    SpeedButtonOmitPeriodForCharacters: TSpeedButton;
-    SpeedButtonOmitOrForCharacters: TSpeedButton;
-    SpeedButtonEmphasizeFeatures: TSpeedButton;
-    SpeedButtonNewParagraphsAtCharacters: TSpeedButton;
-    SpeedButtonItemSubheadings: TSpeedButton;
-    SpeedButtonLinkCharacters: TSpeedButton;
-    SpeedButtonExcludeCharacters: TSpeedButton;
-    SpeedButtonExcludeItems: TSpeedButton;
+    PanelButtons: TPanel;
     SpinEditPrintWidth: TSpinEdit;
     procedure ComboBoxOutputFormatChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);

@@ -27,6 +27,9 @@ type
     RunButton: TToolButton;
     CopyButton: TToolButton;
     ReturnButton: TToolButton;
+    ToolButton1: TToolButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
     procedure CopyButtonClick(Sender: TObject);
     procedure FileReturnItemClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);

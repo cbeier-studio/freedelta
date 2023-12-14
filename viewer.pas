@@ -13,10 +13,11 @@ type
   { TViewerForm }
 
   TViewerForm = class(TForm)
+    CloseBtn: TBitBtn;
     CopyBtn: TBitBtn;
     HtmlViewer: THtmlViewer;
-    CloseBtn: TBitBtn;
     ImageViewer: TImage;
+    PanelButtons: TPanel;
     RtfViewer: TRichMemo;
     ScrollBox: TScrollBox;
     TextViewer: TMemo;

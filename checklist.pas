@@ -5,16 +5,17 @@ unit Checklist;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, CheckLst, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, CheckLst, StdCtrls, ExtCtrls;
 
 type
 
   { TChecklistForm }
 
   TChecklistForm = class(TForm)
-    OKButton: TButton;
     CancelButton: TButton;
     CheckListBox: TCheckListBox;
+    OKButton: TButton;
+    PanelButtons: TPanel;
     procedure FormShow(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
   private

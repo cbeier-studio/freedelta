@@ -6,24 +6,23 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  SpinEx, LCLTranslator;
+  SpinEx, LCLTranslator, ExtCtrls, EditBtn;
 
 type
 
   { TDistForm }
 
   TDistForm = class(TForm)
-    OKButton: TButton;
     CancelButton: TButton;
     CheckBoxMatchOverlap: TCheckBox;
     CheckBoxPHYLIPFormat: TCheckBox;
-    EditExcludeItems: TEdit;
-    EditExcludeCharacters: TEdit;
+    EditExcludeItems: TEditButton;
+    EditExcludeCharacters: TEditButton;
     LabelMinimumNumberOfComparisons: TLabel;
     LabelExcludeItems: TLabel;
     LabelExcludeCharacters: TLabel;
-    SpeedButtonExcludeItems: TSpeedButton;
-    SpeedButtonExcludeCharacters: TSpeedButton;
+    OKButton: TButton;
+    PanelButtons: TPanel;
     SpinEditMinimumNumberOfComparisons: TSpinEditEx;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);

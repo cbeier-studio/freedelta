@@ -1,14 +1,15 @@
 object ScriptForm: TScriptForm
   Left = 274
-  Height = 359
+  Height = 449
   Top = 149
-  Width = 561
+  Width = 701
   Caption = 'Script Editor'
-  ClientHeight = 359
-  ClientWidth = 561
+  ClientHeight = 449
+  ClientWidth = 701
   Color = clBtnFace
+  DesignTimePPI = 120
   Font.Color = clWindowText
-  Font.Height = -13
+  Font.Height = -16
   Font.Name = 'System'
   Icon.Data = {
     BE1000000000010001002020000001002000A810000016000000280000002000
@@ -151,13 +152,12 @@ object ScriptForm: TScriptForm
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   Position = poMainFormCenter
-  LCLVersion = '2.0.8.0'
   object ToolBar: TToolBar
     Left = 0
-    Height = 26
     Top = 0
-    Width = 561
-    Images = MainForm.ImageList
+    Width = 701
+    Images = MainForm.ImageList1
+    ImagesWidth = 20
     TabOrder = 0
     object NewButton: TToolButton
       Left = 1
@@ -170,7 +170,7 @@ object ScriptForm: TScriptForm
       ShowHint = True
     end
     object OpenButton: TToolButton
-      Left = 24
+      Left = 30
       Hint = 'Open script'
       Top = 2
       ImageIndex = 1
@@ -180,7 +180,7 @@ object ScriptForm: TScriptForm
       ShowHint = True
     end
     object SaveButton: TToolButton
-      Left = 47
+      Left = 59
       Hint = 'Save script'
       Top = 2
       ImageIndex = 3
@@ -190,11 +190,11 @@ object ScriptForm: TScriptForm
       ShowHint = True
     end
     object RunButton: TToolButton
-      Left = 93
+      Left = 133
       Hint = 'Run script'
       Top = 2
       DropdownMenu = RunMenu
-      ImageIndex = 32
+      ImageIndex = 19
       OnClick = RunButtonClick
       ParentShowHint = False
       ShowCaption = False
@@ -202,41 +202,62 @@ object ScriptForm: TScriptForm
       Style = tbsButtonDrop
     end
     object CopyButton: TToolButton
-      Left = 70
+      Left = 96
       Hint = 'Copy text'
       Top = 2
-      ImageIndex = 22
+      ImageIndex = 16
       OnClick = CopyButtonClick
       ParentShowHint = False
       ShowCaption = False
       ShowHint = True
     end
     object ReturnButton: TToolButton
-      Left = 126
+      Left = 183
       Hint = 'Close script'
       Top = 2
-      ImageIndex = 33
+      ImageIndex = 20
       OnClick = ReturnButtonClick
       ParentShowHint = False
       ShowCaption = False
       ShowHint = True
     end
+    object ToolButton1: TToolButton
+      Left = 88
+      Height = 28
+      Top = 2
+      Caption = 'ToolButton1'
+      Style = tbsSeparator
+    end
+    object ToolButton2: TToolButton
+      Left = 125
+      Height = 28
+      Top = 2
+      Caption = 'ToolButton2'
+      Style = tbsSeparator
+    end
+    object ToolButton3: TToolButton
+      Left = 175
+      Height = 28
+      Top = 2
+      Caption = 'ToolButton3'
+      Style = tbsSeparator
+    end
   end
   inline Memo: TSynEdit
     Left = 0
-    Height = 333
-    Top = 26
-    Width = 561
+    Height = 417
+    Top = 32
+    Width = 701
     Align = alClient
     Font.Color = clWindowText
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqNonAntialiased
     ParentColor = False
     ParentFont = False
     TabOrder = 1
-    Gutter.Width = 57
+    Gutter.Width = 72
     Gutter.MouseActions = <>
     RightGutter.Width = 0
     RightGutter.MouseActions = <>
@@ -585,11 +606,11 @@ object ScriptForm: TScriptForm
     LineHighlightColor.Foreground = clNone
     inline SynLeftGutterPartList1: TSynGutterPartList
       object SynGutterMarks1: TSynGutterMarks
-        Width = 24
+        Width = 30
         MouseActions = <>
       end
       object SynGutterLineNumber1: TSynGutterLineNumber
-        Width = 17
+        Width = 21
         MouseActions = <>
         MarkupInfo.Background = clBtnFace
         MarkupInfo.Foreground = clNone
@@ -599,18 +620,19 @@ object ScriptForm: TScriptForm
         LeadingZeros = False
       end
       object SynGutterChanges1: TSynGutterChanges
-        Width = 4
+        Width = 5
         MouseActions = <>
         ModifiedColor = 59900
         SavedColor = clGreen
       end
       object SynGutterSeparator1: TSynGutterSeparator
-        Width = 2
+        Width = 3
         MouseActions = <>
         MarkupInfo.Background = clWhite
         MarkupInfo.Foreground = clGray
       end
       object SynGutterCodeFolding1: TSynGutterCodeFolding
+        Width = 13
         MouseActions = <>
         MarkupInfo.Background = clNone
         MarkupInfo.Foreground = clGray
@@ -623,17 +645,17 @@ object ScriptForm: TScriptForm
     Title = 'Save As'
     Filter = 'All files (*.*)|*.*'
     Options = [ofOverwritePrompt, ofHideReadOnly, ofPathMustExist]
-    left = 476
-    top = 8
+    Left = 595
+    Top = 10
   end
   object OpenDialog: TOpenDialog
     Filter = 'All files (*.*)|*.*'
-    left = 506
-    top = 8
+    Left = 633
+    Top = 10
   end
   object RunMenu: TPopupMenu
-    left = 448
-    top = 8
+    Left = 560
+    Top = 10
     object RunMenuItemCONFOR: TMenuItem
       Caption = 'CONFOR'
       Hint = 'Run the CONFOR program'

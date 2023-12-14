@@ -443,7 +443,7 @@ interface
 uses
   LCLIntf, LCLType, Classes, SysUtils, StrUtils, FileUtil, Forms, Controls,
   Graphics, Dialogs, ComCtrls, Menus, Clipbrd, IniFiles, HistoryFiles,
-  CheckLst, LCLTranslator, ExtCtrls, StdCtrls, Grids, Zipper, Process,
+  CheckLst, LCLTranslator, ExtCtrls, StdCtrls, Grids, Zipper, Process, {$IFDEF MSWINDOWS} Windows, {$ENDIF}
   Math, Delta, Types;
 
 const
@@ -463,6 +463,7 @@ type
     FindDialog: TFindDialog;
     HelpMenuItem: TMenuItem;
     EditScriptItem: TMenuItem;
+    ImageList1: TImageList;
     MatrixParsimonyItemTNT: TMenuItem;
     MatrixParsimonyItemPAUP: TMenuItem;
     ExportTextItem: TMenuItem;
@@ -749,18 +750,22 @@ function ExistWordInString(const AString: PChar; const ASearchString: string;
 procedure Join(const Values: TStrings; var S: string; const sep: string);
 procedure Split(const Values: TStrings; const S: string; const Delimiters: TSysCharSet);
 procedure SplitString(Delimiter: char; Str: string; ListOfStrings: TStrings);
+{$IFDEF MSWINDOWS}
+function GetLocaleInformation(Flag: integer): string;
+{$ENDIF}
+function GetLocaleLanguage: string;
 
 implementation
 
-uses About, Prepare, Tonat, Tokey, Toint, Todis, Cluster, Chars,
-  Viewer, Phylogen, Script;
+uses
+  About, Prepare, Tonat, Tokey, Toint, Todis, Cluster, Chars, Viewer, Phylogen, Script;
 
 {$R *.lfm}
 {$I resources.inc}
 
 function IsWindows: boolean;
 begin
-  {$IFDEF Windows}
+  {$IFDEF MSWINDOWS}
   Result := True;
   {$ENDIF}
   {$IF DEFINED(DARWIN) or DEFINED(Linux) or DEFINED(Unix)}
@@ -891,12 +896,34 @@ begin
   ListOfStrings.DelimitedText := Str;
 end;
 
+{$IFDEF MSWINDOWS}
+function GetLocaleInformation(Flag: integer): string;
+var
+  pcLCA: array[0..20] of char;
+begin
+  if (GetLocaleInfo(LOCALE_SYSTEM_DEFAULT, Flag, pcLCA, 19) <= 0) then
+  begin
+    pcLCA[0] := #0;
+  end;
+  Result := pcLCA;
+end;
+{$ENDIF}
+
+function GetLocaleLanguage: string;
+begin
+  {$IFDEF MSWINDOWS}
+   Result := GetLocaleInformation(LOCALE_SENGLANGUAGE);
+  {$ELSE}
+   Result := SysUtils.GetEnvironmentVariable('LANG');
+  {$ENDIF}
+end;
+
 procedure CreateBackup(Filename: string);
 var
   BackupFilename: string;
 begin
   BackupFilename := ChangeFileExt(Filename, '.bak');
-  CopyFile(Filename, BackupFilename);
+  FileUtil.CopyFile(Filename, BackupFilename);
 end;
 
 procedure ToNex(Inputfile: string);
@@ -1142,7 +1169,7 @@ var
             FileSearch(IncludeTrailingBackSlash(dirName) + searchResult.Name);
         until FindNext(searchResult) <> 0;
       finally
-        FindClose(searchResult);
+        SysUtils.FindClose(searchResult);
       end;
     end;
   end;
@@ -1650,7 +1677,7 @@ begin
   sPath := GetAppConfigDir(False);
   IniFile := TIniFile.Create(sPath + 'fde.ini');
   sLang := IniFile.ReadString('Options', 'Language', 'en'); // First default is English
-  SetDefaultLang(sLang, 'languages', True);
+  SetDefaultLang(sLang, 'languages', 'en', True);
   case sLang of
     'en':
     begin
@@ -1807,9 +1834,9 @@ begin
         (Dataset.CharacterList[J].charType = 'OM') then
       begin
         if (Dataset.CharacterList[J].charType = 'UM') then
-          Character.ImageIndex := 18
+          Character.ImageIndex := 34    // 18
         else if (Dataset.CharacterList[J].charType = 'OM') then
-          Character.ImageIndex := 28;
+          Character.ImageIndex := 35;   // 28
         Values := TStringList.Create;
         try
           Split(Values, Delta.RemoveComments(Attribute), ['/', '&', '-']);
@@ -1863,9 +1890,9 @@ begin
         (Dataset.CharacterList[J].charType = 'RN') then
       begin
         if (Dataset.CharacterList[J].charType = 'IN') then
-          Character.ImageIndex := 17
+          Character.ImageIndex := 32  // 17
         else if (Dataset.CharacterList[J].charType = 'RN') then
-          Character.ImageIndex := 27;
+          Character.ImageIndex := 33; // 27
         State := CharacterTreeView.Items.AddChild(Character,
           Dataset.ItemList[SelectedIndex].itemAttributes[J] + ' ' +
           IfThen(Attribute <> 'U', Dataset.CharacterList[J].charUnit, ''));
@@ -1874,7 +1901,7 @@ begin
       end
       else if (Dataset.CharacterList[J].charType = 'TE') then
       begin
-        Character.ImageIndex := 19;
+        Character.ImageIndex := 36;  // 19
         State := CharacterTreeView.Items.AddChild(Character,
           Dataset.ItemList[SelectedIndex].itemAttributes[j]);
       end;
@@ -2479,7 +2506,7 @@ begin
     ConforPath := sPath + 'confor';
     {$ENDIF}
     if FileExists('key.' + Extension) then
-      DeleteFile('key.' + Extension);
+      SysUtils.DeleteFile('key.' + Extension);
     Screen.Cursor := crHourGlass;
     if RunCommand(ConforPath, ['tokey'], S, [poNoConsole]) then
     begin
@@ -2638,7 +2665,7 @@ begin
         //if GetEnvironmentVariable('DELTA') = '' then
         if not FileExists('intkey.ink') then
           CreateINTKEY('intkey.ink', Dataset.Heading, RBase, Varywt);
-        Lang := GetDefaultLang;
+        Lang := GetLocaleLanguage;
         case Lang of
           'en': HlpFile := 'intken.hin';
           'pt': HlpFile := 'intkpt.hin';
@@ -2681,7 +2708,7 @@ begin
   LanguageSpanishItem.Checked := False;
   sPath := GetAppConfigDir(False);
   IniFile := TIniFile.Create(sPath + 'fde.ini');
-  SetDefaultLang('en', 'language', True);
+  SetDefaultLang('en', 'language', 'fde.en', True);
   IniFile.WriteString('Options', 'Language', 'en');
   IniFile.Free;
 end;
@@ -2698,7 +2725,7 @@ begin
   LanguageSpanishItem.Checked := False;
   sPath := GetAppConfigDir(False);
   IniFile := TIniFile.Create(sPath + 'fde.ini');
-  SetDefaultLang('fr', 'language', True);
+  SetDefaultLang('fr', 'language', 'fde.fr', True);
   IniFile.WriteString('Options', 'Language', 'fr');
   IniFile.Free;
 end;
@@ -2715,7 +2742,7 @@ begin
   LanguageSpanishItem.Checked := False;
   sPath := GetAppConfigDir(False);
   IniFile := TIniFile.Create(sPath + 'fde.ini');
-  SetDefaultLang('pt_br', 'language', True);
+  SetDefaultLang('pt_br', 'language', 'fde.pt_br', True);
   IniFile.WriteString('Options', 'Language', 'pt_br');
   IniFile.Free;
 end;
@@ -2732,7 +2759,7 @@ begin
   LanguageEnglishItem.Checked := False;
   sPath := GetAppConfigDir(False);
   IniFile := TIniFile.Create(sPath + 'fde.ini');
-  SetDefaultLang('es', 'language', True);
+  SetDefaultLang('es', 'language', 'fde.es', True);
   IniFile.WriteString('Options', 'Language', 'es');
   IniFile.Free;
 end;
@@ -3375,7 +3402,7 @@ var
 begin
   sPath := ExtractFilePath(Application.ExeName);
   Vocabulary := TStringList.Create;
-  Lang := GetDefaultLang;
+  Lang := GetLocaleLanguage;
   case Lang of
     'en': Vocabulary.LoadFromFile(sPath + 'vocabulary/vocaben');
     'pt': Vocabulary.LoadFromFile(sPath + 'vocabulary/vocabpt');
@@ -3524,7 +3551,7 @@ begin
     ConforPath := sPath + 'confor';
     {$ENDIF}
     if FileExists('description.' + Extension) then
-      DeleteFile('description.' + Extension);
+      SysUtils.DeleteFile('description.' + Extension);
     Screen.Cursor := crHourGlass;
     if RunCommand(ConforPath, ['tonat'], S, [poNoConsole]) then
     begin
@@ -4412,9 +4439,9 @@ begin
           'UM', 'OM':
           begin
             if (Dataset.CharacterList[charCount].charType = 'UM') then
-              CharNode.ImageIndex := 18
+              CharNode.ImageIndex := 34     // 18
             else if (Dataset.CharacterList[charCount].charType = 'OM') then
-              CharNode.ImageIndex := 28;
+              CharNode.ImageIndex := 35;    // 28
             for K := 0 to Dataset.CharacterList[charCount].charStates.Count - 1 do
             begin
               StateNode := CharacterTreeView.Items.AddChild(CharNode,
@@ -4431,14 +4458,14 @@ begin
           'IN', 'RN':
           begin
             if (Dataset.CharacterList[charCount].charType = 'IN') then
-              CharNode.ImageIndex := 17
+              CharNode.ImageIndex := 32     // 17
             else if (Dataset.CharacterList[charCount].charType = 'RN') then
-              CharNode.ImageIndex := 27;
+              CharNode.ImageIndex := 33;    // 27
             StateNode := CharacterTreeView.Items.AddChild(CharNode,
               Dataset.CharacterList[charCount].charUnit);
           end;
           'TE':
-            CharNode.ImageIndex := 19;
+            CharNode.ImageIndex := 36;     // 19
         end;
         CharNode.SelectedIndex := CharNode.ImageIndex;
         DataMatrix.ColCount := DataMatrix.ColCount + 1;

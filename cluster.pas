@@ -5,17 +5,18 @@ unit Cluster;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
   { TClusterForm }
 
   TClusterForm = class(TForm)
-    OKButton: TButton;
     CancelButton: TButton;
     ComboBoxMethod: TComboBox;
     LabelMethod: TLabel;
+    OKButton: TButton;
+    PanelButtons: TPanel;
     procedure FormCreate(Sender: TObject);
   private
 

@@ -1,12 +1,13 @@
 object KeyStatesForm: TKeyStatesForm
   Left = 433
-  Height = 361
+  Height = 465
   Top = 203
-  Width = 499
+  Width = 624
   BorderStyle = bsDialog
   Caption = 'Key States'
-  ClientHeight = 361
-  ClientWidth = 499
+  ClientHeight = 465
+  ClientWidth = 624
+  DesignTimePPI = 120
   Icon.Data = {
     BE1000000000010001002020000001002000A810000016000000280000002000
     0000400000000100200000000000001000006400000064000000000000000000
@@ -147,81 +148,80 @@ object KeyStatesForm: TKeyStatesForm
   OnClose = FormClose
   OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '2.0.12.0'
   object ComboBoxCharacters: TComboBox
-    Left = 12
-    Height = 23
-    Top = 27
-    Width = 477
+    Left = 15
+    Height = 28
+    Top = 34
+    Width = 596
     AutoSize = False
-    ItemHeight = 15
-    OnChange = ComboBoxCharactersChange
+    ItemHeight = 20
     TabOrder = 0
+    OnChange = ComboBoxCharactersChange
   end
   object LabelCharacters: TLabel
-    Left = 11
-    Height = 15
-    Top = 5
-    Width = 59
+    Left = 14
+    Height = 20
+    Top = 6
+    Width = 72
     Caption = 'Characters:'
     ParentColor = False
   end
   object Panel1: TPanel
-    Left = 12
-    Height = 42
-    Top = 59
-    Width = 477
+    Left = 15
+    Height = 52
+    Top = 74
+    Width = 596
     BevelOuter = bvNone
     BorderStyle = bsSingle
-    ClientHeight = 38
-    ClientWidth = 473
+    ClientHeight = 48
+    ClientWidth = 592
     TabOrder = 1
     object LabelClasses: TLabel
-      Left = 16
-      Height = 15
-      Top = 11
-      Width = 102
+      Left = 20
+      Height = 20
+      Top = 14
+      Width = 126
       Caption = 'Number of Classes:'
       ParentColor = False
     end
     object SpinEditClasses: TSpinEdit
-      Left = 130
-      Height = 23
-      Top = 7
-      Width = 66
+      Left = 162
+      Height = 29
+      Top = 9
+      Width = 82
       AutoSize = False
       OnEditingDone = SpinEditClassesEditingDone
       TabOrder = 0
     end
     object RadioButtonSquareRoot: TRadioButton
-      Left = 216
-      Height = 19
-      Top = 9
-      Width = 110
+      Left = 270
+      Height = 24
+      Top = 11
+      Width = 136
       Caption = 'Square Root of N'
-      OnClick = RadioButtonSquareRootClick
       TabOrder = 1
       TabStop = True
+      OnClick = RadioButtonSquareRootClick
     end
     object RadioButtonSturgesRule: TRadioButton
-      Left = 352
-      Height = 19
-      Top = 9
-      Width = 88
+      Left = 440
+      Height = 24
+      Top = 11
+      Width = 106
       Caption = 'Sturges'' Rule'
-      OnClick = RadioButtonSturgesRuleClick
       TabOrder = 2
       TabStop = True
+      OnClick = RadioButtonSturgesRuleClick
     end
   end
   object MemoResults: TMemo
-    Left = 11
-    Height = 137
-    Top = 131
-    Width = 477
+    Left = 14
+    Height = 171
+    Top = 164
+    Width = 596
     Font.CharSet = ANSI_CHARSET
     Font.Color = clBlack
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Courier New'
     Font.Pitch = fpFixed
     Font.Quality = fqDraft
@@ -231,51 +231,30 @@ object KeyStatesForm: TKeyStatesForm
     TabOrder = 2
     WordWrap = False
   end
-  object OKButton: TButton
-    Left = 331
-    Height = 25
-    Top = 328
-    Width = 75
-    Caption = 'OK'
-    Default = True
-    ModalResult = 1
-    OnClick = OKButtonClick
-    TabOrder = 3
-  end
-  object CancelButton: TButton
-    Left = 414
-    Height = 25
-    Top = 328
-    Width = 75
-    Cancel = True
-    Caption = 'Cancel'
-    ModalResult = 2
-    TabOrder = 4
-  end
   object LabelFrequencyTable: TLabel
-    Left = 12
-    Height = 15
-    Top = 109
-    Width = 89
+    Left = 15
+    Height = 20
+    Top = 136
+    Width = 109
     Caption = 'Frequency Table:'
     ParentColor = False
   end
   object LabeledEditKeyStates: TLabeledEdit
-    Left = 12
-    Height = 23
-    Top = 294
-    Width = 450
-    EditLabel.Height = 15
-    EditLabel.Width = 450
+    Left = 15
+    Height = 28
+    Top = 368
+    Width = 562
+    EditLabel.Height = 20
+    EditLabel.Width = 562
     EditLabel.Caption = 'Key States:'
     EditLabel.ParentColor = False
-    TabOrder = 5
+    TabOrder = 3
   end
   object ClearButton: TSpeedButton
-    Left = 466
-    Height = 22
-    Top = 294
-    Width = 23
+    Left = 582
+    Height = 28
+    Top = 368
+    Width = 29
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       20000000000000040000640000006400000000000000000000000000BF000000
@@ -312,6 +291,48 @@ object KeyStatesForm: TKeyStatesForm
       BF000000BF000000BF000000BF000000BF000000BF000000BF000000BF000000
       BF000000BF000000BF000000BF000000BF000000BF000000BF00
     }
+    Images = MainForm.ImageList1
+    ImageIndex = 22
+    ImageWidth = 20
     OnClick = ClearButtonClick
+  end
+  object PanelButtons: TPanel
+    Left = 0
+    Height = 46
+    Top = 419
+    Width = 624
+    Align = alBottom
+    BevelOuter = bvNone
+    ChildSizing.LeftRightSpacing = 16
+    ChildSizing.TopBottomSpacing = 8
+    ChildSizing.HorizontalSpacing = 8
+    ClientHeight = 46
+    ClientWidth = 624
+    Color = 16448250
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 4
+    object OKButton: TButton
+      Left = 412
+      Height = 30
+      Top = 8
+      Width = 94
+      Align = alRight
+      Caption = 'OK'
+      ModalResult = 1
+      TabOrder = 0
+      OnClick = OKButtonClick
+    end
+    object CancelButton: TButton
+      Left = 514
+      Height = 30
+      Top = 8
+      Width = 94
+      Align = alRight
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 1
+    end
   end
 end

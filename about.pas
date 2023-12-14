@@ -18,6 +18,8 @@ type
       IDE: TLabel;
       Comments: TLabel;
       Donation: TImage;
+      OKButton: TButton;
+      PanelButtons: TPanel;
       Platform: TLabel;
       SystemInformation: TLabel;
       Website: TLabel;
@@ -27,7 +29,6 @@ type
       ProgramIcon: TImage;
       ProductName: TLabel;
       Copyright: TLabel;
-      OKButton: TButton;
       procedure DonationClick(Sender: TObject);
       procedure FormShow(Sender: TObject);
       procedure WebsiteClick(Sender: TObject);

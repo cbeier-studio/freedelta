@@ -13,19 +13,20 @@ type
   { TCharacterForm }
 
   TCharacterForm = class(TForm)
+    CancelButton: TButton;
     CheckCharacters: TCheckListBox;
     ComboAttributes: TComboBox;
     Label1: TLabel;
     LabelAttributes: TLabel;
-    OKButton: TButton;
-    CancelButton: TButton;
     CheckImplicit: TCheckBox;
     LabelStates: TLabel;
     EditChar: TLabeledEdit;
     EditUnit: TLabeledEdit;
     ListStates: TListBox;
     EditNote: TMemo;
+    OKButton: TButton;
     PageControl: TPageControl;
+    PanelButtons: TPanel;
     rbUM: TRadioButton;
     rbOM: TRadioButton;
     rbIN: TRadioButton;

@@ -15,9 +15,9 @@
 {"hash":174582826,"name":"tkeyform.labelvarywt.caption","sourcebytes":[86,65,82,89,87,84,58],"value":"VARYWT:"},
 {"hash":27859738,"name":"tkeyform.labelincludeitems.caption","sourcebytes":[73,110,99,108,117,100,101,32,73,116,101,109,115,58],"value":"Include Items:"},
 {"hash":11082266,"name":"tkeyform.labelincludecharacters.caption","sourcebytes":[73,110,99,108,117,100,101,32,67,104,97,114,97,99,116,101,114,115,58],"value":"Include Characters:"},
-{"hash":1339,"name":"tkeyform.okbutton.caption","sourcebytes":[79,75],"value":"OK"},
-{"hash":77089212,"name":"tkeyform.cancelbutton.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"},
 {"hash":10928090,"name":"tkeyform.printwidthlabel.caption","sourcebytes":[80,114,105,110,116,32,87,105,100,116,104,58],"value":"Print Width:"},
 {"hash":31521626,"name":"tkeyform.labeloutputformat.caption","sourcebytes":[79,117,116,112,117,116,32,70,111,114,109,97,116,58],"value":"Output Format:"},
-{"hash":371956,"name":"tkeyform.comboboxoutputformat.text","sourcebytes":[84,101,120,116],"value":"Text"}
+{"hash":371956,"name":"tkeyform.comboboxoutputformat.text","sourcebytes":[84,101,120,116],"value":"Text"},
+{"hash":1339,"name":"tkeyform.okbutton.caption","sourcebytes":[79,75],"value":"OK"},
+{"hash":77089212,"name":"tkeyform.cancelbutton.caption","sourcebytes":[67,97,110,99,101,108],"value":"Cancel"}
 ]}

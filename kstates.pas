@@ -16,15 +16,16 @@ type
   { TKeyStatesForm }
 
   TKeyStatesForm = class(TForm)
+    CancelButton: TButton;
     LabeledEditKeyStates: TLabeledEdit;
     LabelFrequencyTable: TLabel;
-    OKButton: TButton;
-    CancelButton: TButton;
     ComboBoxCharacters: TComboBox;
     LabelCharacters: TLabel;
     LabelClasses: TLabel;
     MemoResults: TMemo;
+    OKButton: TButton;
     Panel1: TPanel;
+    PanelButtons: TPanel;
     RadioButtonSquareRoot: TRadioButton;
     RadioButtonSturgesRule: TRadioButton;
     ClearButton: TSpeedButton;
