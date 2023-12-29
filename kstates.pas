@@ -37,6 +37,7 @@ type
     procedure OKButtonClick(Sender: TObject);
     procedure RadioButtonSquareRootClick(Sender: TObject);
     procedure RadioButtonSturgesRuleClick(Sender: TObject);
+    procedure SpinEditClassesChange(Sender: TObject);
     procedure SpinEditClassesEditingDone(Sender: TObject);
   private
 
@@ -255,6 +256,13 @@ begin
   SpinEditClasses.Value := NC;
   RadioButtonSturgesRule.Checked := True;
   RadioButtonSquareRoot.Checked := False;
+  KeyStatesList.Clear;
+  ComboBoxCharacters.OnChange(Self);
+end;
+
+procedure TKeyStatesForm.SpinEditClassesChange(Sender: TObject);
+begin
+  NC := SpinEditClasses.Value;
   KeyStatesList.Clear;
   ComboBoxCharacters.OnChange(Self);
 end;

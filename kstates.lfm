@@ -190,6 +190,7 @@ object KeyStatesForm: TKeyStatesForm
       Top = 9
       Width = 82
       AutoSize = False
+      OnChange = SpinEditClassesChange
       OnEditingDone = SpinEditClassesEditingDone
       TabOrder = 0
     end

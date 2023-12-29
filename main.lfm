@@ -259,6 +259,8 @@ object MainForm: TMainForm
           Width = 927
           Align = alRight
           Anchors = [akTop, akLeft, akRight, akBottom]
+          OnEditingDone = AttrEditorEditingDone
+          OnKeyDown = AttrEditorKeyDown
           ScrollBars = ssAutoVertical
           TabOrder = 0
           OnEditingDone = AttrEditorEditingDone
