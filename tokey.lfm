@@ -1,13 +1,12 @@
 object KeyForm: TKeyForm
   Left = 498
-  Height = 630
+  Height = 513
   Top = 141
-  Width = 500
+  Width = 400
   BorderStyle = bsDialog
   Caption = 'KEY Directives'
-  ClientHeight = 630
-  ClientWidth = 500
-  DesignTimePPI = 120
+  ClientHeight = 513
+  ClientWidth = 400
   Icon.Data = {
     BE1000000000010001002020000001002000A810000016000000280000002000
     0000400000000100200000000000001000006400000064000000000000000000
@@ -149,43 +148,43 @@ object KeyForm: TKeyForm
   OnDestroy = FormDestroy
   Position = poMainFormCenter
   object LabelHeading: TLabel
-    Left = 18
-    Height = 20
-    Top = 15
-    Width = 60
+    Left = 14
+    Height = 15
+    Top = 12
+    Width = 48
     Caption = 'Heading:'
     ParentColor = False
   end
   object EditHeading: TEdit
-    Left = 112
-    Height = 28
-    Top = 10
-    Width = 375
+    Left = 90
+    Height = 23
+    Top = 8
+    Width = 300
     TabOrder = 0
   end
   object CheckBoxAddCharacterNumbers: TCheckBox
-    Left = 18
-    Height = 24
-    Top = 44
-    Width = 183
+    Left = 14
+    Height = 19
+    Top = 38
+    Width = 149
     Alignment = taLeftJustify
     Caption = 'Add Character Numbers:'
     TabOrder = 1
   end
   object CheckBoxNoBrackettedKey: TCheckBox
-    Left = 18
-    Height = 24
-    Top = 71
-    Width = 147
+    Left = 14
+    Height = 19
+    Top = 64
+    Width = 118
     Alignment = taLeftJustify
     Caption = 'No Bracketted Key:'
     TabOrder = 2
   end
   object CheckBoxNoTabularKey: TCheckBox
-    Left = 295
-    Height = 24
-    Top = 71
-    Width = 126
+    Left = 236
+    Height = 19
+    Top = 64
+    Width = 101
     Alignment = taLeftJustify
     Caption = 'No Tabular Key:'
     Checked = True
@@ -193,10 +192,10 @@ object KeyForm: TKeyForm
     TabOrder = 3
   end
   object SpinEditNumberOfConfirmatoryCharacters: TSpinEditEx
-    Left = 295
-    Height = 28
-    Top = 101
-    Width = 187
+    Left = 236
+    Height = 23
+    Top = 89
+    Width = 150
     MaxLength = 0
     TabOrder = 4
     MaxValue = 4
@@ -204,58 +203,58 @@ object KeyForm: TKeyForm
     Value = 0
   end
   object LabelNumberOfConfirmatoryCharacters: TLabel
-    Left = 18
-    Height = 20
-    Top = 104
-    Width = 239
+    Left = 14
+    Height = 15
+    Top = 93
+    Width = 194
     Caption = 'Number of Confirmatory Characters:'
     ParentColor = False
   end
   object LabelTreatCharactersAsVariable: TLabel
-    Left = 18
-    Height = 20
-    Top = 140
-    Width = 185
+    Left = 14
+    Height = 15
+    Top = 121
+    Width = 145
     Caption = 'Treat Characters as Variable:'
     ParentColor = False
   end
   object LabelUseNormalValues: TLabel
-    Left = 18
-    Height = 20
-    Top = 176
-    Width = 127
+    Left = 14
+    Height = 15
+    Top = 151
+    Width = 101
     Caption = 'Use Normal Values:'
     ParentColor = False
   end
   object LabelCharacterReliabilities: TLabel
-    Left = 18
-    Height = 20
-    Top = 212
-    Width = 147
+    Left = 14
+    Height = 15
+    Top = 180
+    Width = 116
     Caption = 'Character Reliabilities:'
     ParentColor = False
   end
   object LabelKeyStates: TLabel
-    Left = 18
-    Height = 20
-    Top = 248
-    Width = 71
+    Left = 14
+    Height = 15
+    Top = 208
+    Width = 56
     Caption = 'Key States:'
     ParentColor = False
   end
   object LabelABASE: TLabel
-    Left = 18
-    Height = 20
-    Top = 284
-    Width = 48
+    Left = 14
+    Height = 15
+    Top = 236
+    Width = 38
     Caption = 'ABASE:'
     ParentColor = False
   end
   object FloatSpinEditABASE: TFloatSpinEditEx
-    Left = 295
-    Height = 28
-    Top = 281
-    Width = 187
+    Left = 236
+    Height = 23
+    Top = 234
+    Width = 150
     MaxLength = 0
     TabOrder = 9
     MaxValue = 5
@@ -263,18 +262,18 @@ object KeyForm: TKeyForm
     Value = 1.2
   end
   object LabelRBASE: TLabel
-    Left = 18
-    Height = 20
-    Top = 320
-    Width = 47
+    Left = 14
+    Height = 15
+    Top = 265
+    Width = 37
     Caption = 'RBASE:'
     ParentColor = False
   end
   object FloatSpinEditRBASE: TFloatSpinEditEx
-    Left = 295
-    Height = 28
-    Top = 317
-    Width = 187
+    Left = 236
+    Height = 23
+    Top = 263
+    Width = 150
     MaxLength = 0
     TabOrder = 10
     MaxValue = 5
@@ -282,18 +281,18 @@ object KeyForm: TKeyForm
     Value = 1.4
   end
   object LabelREUSE: TLabel
-    Left = 18
-    Height = 20
-    Top = 356
-    Width = 46
+    Left = 14
+    Height = 15
+    Top = 294
+    Width = 36
     Caption = 'REUSE:'
     ParentColor = False
   end
   object FloatSpinEditREUSE: TFloatSpinEditEx
-    Left = 295
-    Height = 28
-    Top = 353
-    Width = 187
+    Left = 236
+    Height = 23
+    Top = 292
+    Width = 150
     MaxLength = 0
     TabOrder = 11
     MaxValue = 5
@@ -301,95 +300,96 @@ object KeyForm: TKeyForm
     Value = 1.01
   end
   object LabelVARYWT: TLabel
-    Left = 18
-    Height = 20
-    Top = 392
-    Width = 60
+    Left = 14
+    Height = 15
+    Top = 322
+    Width = 48
     Caption = 'VARYWT:'
     ParentColor = False
   end
   object FloatSpinEditVARYWT: TFloatSpinEditEx
-    Left = 295
-    Height = 28
-    Top = 389
-    Width = 187
+    Left = 236
+    Height = 23
+    Top = 321
+    Width = 150
     MaxLength = 0
     TabOrder = 12
     MaxValue = 1
     Value = 0.8
   end
   object LabelIncludeItems: TLabel
-    Left = 18
-    Height = 20
-    Top = 428
-    Width = 91
+    Left = 14
+    Height = 15
+    Top = 352
+    Width = 74
     Caption = 'Include Items:'
     ParentColor = False
   end
   object LabelIncludeCharacters: TLabel
-    Left = 18
-    Height = 20
-    Top = 464
-    Width = 124
+    Left = 14
+    Height = 15
+    Top = 382
+    Width = 101
     Caption = 'Include Characters:'
     ParentColor = False
   end
   object PrintWidthLabel: TLabel
-    Left = 18
-    Height = 20
-    Top = 500
-    Width = 77
+    Left = 14
+    Height = 15
+    Top = 412
+    Width = 63
     Caption = 'Print Width:'
     ParentColor = False
   end
   object SpinEditPrintWidth: TSpinEdit
-    Left = 295
-    Height = 28
-    Top = 497
-    Width = 187
+    Left = 236
+    Height = 23
+    Top = 408
+    Width = 150
     MaxValue = 299
     TabOrder = 15
     Value = 80
   end
   object LabelOutputFormat: TLabel
-    Left = 18
-    Height = 20
-    Top = 536
-    Width = 100
+    Left = 14
+    Height = 15
+    Top = 440
+    Width = 82
     Caption = 'Output Format:'
     ParentColor = False
   end
   object ComboBoxOutputFormat: TComboBox
-    Left = 295
-    Height = 28
-    Top = 533
-    Width = 187
-    ItemHeight = 20
+    Left = 236
+    Height = 23
+    Top = 437
+    Width = 150
+    ItemHeight = 15
     TabOrder = 16
     Text = 'Text'
     OnChange = ComboBoxOutputFormatChange
   end
   object PanelButtons: TPanel
     Left = 0
-    Height = 46
-    Top = 584
-    Width = 500
+    Height = 41
+    Top = 472
+    Width = 400
     Align = alBottom
+    AutoSize = True
     BevelOuter = bvNone
     ChildSizing.LeftRightSpacing = 16
     ChildSizing.TopBottomSpacing = 8
     ChildSizing.HorizontalSpacing = 8
-    ClientHeight = 46
-    ClientWidth = 500
+    ClientHeight = 41
+    ClientWidth = 400
     Color = 16448250
     ParentBackground = False
     ParentColor = False
     TabOrder = 17
     object OKButton: TButton
-      Left = 288
-      Height = 30
+      Left = 226
+      Height = 25
       Top = 8
-      Width = 94
+      Width = 75
       Align = alRight
       Caption = 'OK'
       ModalResult = 1
@@ -397,10 +397,10 @@ object KeyForm: TKeyForm
       OnClick = OKButtonClick
     end
     object CancelButton: TButton
-      Left = 390
-      Height = 30
+      Left = 309
+      Height = 25
       Top = 8
-      Width = 94
+      Width = 75
       Align = alRight
       Caption = 'Cancel'
       ModalResult = 2
@@ -408,11 +408,11 @@ object KeyForm: TKeyForm
     end
   end
   object EditTreatCharactersAsVariable: TEditButton
-    Left = 295
-    Height = 28
-    Top = 137
-    Width = 187
-    ButtonWidth = 29
+    Left = 236
+    Height = 23
+    Top = 118
+    Width = 150
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
@@ -424,11 +424,11 @@ object KeyForm: TKeyForm
     TabOrder = 5
   end
   object EditUseNormalValues: TEditButton
-    Left = 295
-    Height = 28
-    Top = 173
-    Width = 187
-    ButtonWidth = 29
+    Left = 236
+    Height = 23
+    Top = 147
+    Width = 150
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
@@ -440,11 +440,11 @@ object KeyForm: TKeyForm
     TabOrder = 6
   end
   object EditCharacterReliabilities: TEditButton
-    Left = 295
-    Height = 28
-    Top = 209
-    Width = 187
-    ButtonWidth = 29
+    Left = 236
+    Height = 23
+    Top = 176
+    Width = 150
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
@@ -456,11 +456,11 @@ object KeyForm: TKeyForm
     TabOrder = 7
   end
   object EditKeyStates: TEditButton
-    Left = 295
-    Height = 28
-    Top = 245
-    Width = 187
-    ButtonWidth = 29
+    Left = 236
+    Height = 23
+    Top = 205
+    Width = 150
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 8
     ImageWidth = 20
@@ -472,11 +472,11 @@ object KeyForm: TKeyForm
     TabOrder = 8
   end
   object EditIncludeItems: TEditButton
-    Left = 295
-    Height = 28
-    Top = 425
-    Width = 187
-    ButtonWidth = 29
+    Left = 236
+    Height = 23
+    Top = 350
+    Width = 150
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
@@ -488,11 +488,11 @@ object KeyForm: TKeyForm
     TabOrder = 13
   end
   object EditIncludeCharacters: TEditButton
-    Left = 295
-    Height = 28
-    Top = 461
-    Width = 187
-    ButtonWidth = 29
+    Left = 236
+    Height = 23
+    Top = 379
+    Width = 150
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20

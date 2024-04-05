@@ -1,13 +1,12 @@
 object ClusterForm: TClusterForm
   Left = 568
-  Height = 131
+  Height = 110
   Top = 334
-  Width = 309
+  Width = 247
   BorderStyle = bsDialog
   Caption = 'Clustering'
-  ClientHeight = 131
-  ClientWidth = 309
-  DesignTimePPI = 120
+  ClientHeight = 110
+  ClientWidth = 247
   Icon.Data = {
     BE1000000000010001002020000001002000A810000016000000280000002000
     0000400000000100200000000000001000006400000064000000000000000000
@@ -148,16 +147,16 @@ object ClusterForm: TClusterForm
   OnCreate = FormCreate
   Position = poMainFormCenter
   object ComboBoxMethod: TComboBox
-    Left = 16
-    Height = 28
-    Top = 39
-    Width = 277
+    Left = 13
+    Height = 23
+    Top = 31
+    Width = 221
     Align = alTop
     AutoSelect = False
-    BorderSpacing.Left = 16
-    BorderSpacing.Right = 16
-    BorderSpacing.Bottom = 16
-    ItemHeight = 20
+    BorderSpacing.Left = 13
+    BorderSpacing.Right = 13
+    BorderSpacing.Bottom = 13
+    ItemHeight = 15
     ItemIndex = 2
     Items.Strings = (
       'Single linkage (SLM)'
@@ -173,40 +172,41 @@ object ClusterForm: TClusterForm
     Text = 'Average linkage (UPGMA)'
   end
   object LabelMethod: TLabel
-    Left = 16
-    Height = 19
-    Top = 16
-    Width = 277
+    Left = 13
+    Height = 15
+    Top = 13
+    Width = 221
     Align = alTop
     AutoSize = False
-    BorderSpacing.Left = 16
-    BorderSpacing.Top = 16
-    BorderSpacing.Right = 16
-    BorderSpacing.Bottom = 4
+    BorderSpacing.Left = 13
+    BorderSpacing.Top = 13
+    BorderSpacing.Right = 13
+    BorderSpacing.Bottom = 3
     Caption = 'Method:'
     ParentColor = False
   end
   object PanelButtons: TPanel
     Left = 0
-    Height = 46
-    Top = 85
-    Width = 309
+    Height = 41
+    Top = 69
+    Width = 247
     Align = alBottom
+    AutoSize = True
     BevelOuter = bvNone
     ChildSizing.LeftRightSpacing = 16
     ChildSizing.TopBottomSpacing = 8
     ChildSizing.HorizontalSpacing = 8
-    ClientHeight = 46
-    ClientWidth = 309
+    ClientHeight = 41
+    ClientWidth = 247
     Color = 16448250
     ParentBackground = False
     ParentColor = False
     TabOrder = 1
     object OKButton: TButton
-      Left = 97
-      Height = 30
+      Left = 73
+      Height = 25
       Top = 8
-      Width = 94
+      Width = 75
       Align = alRight
       Caption = 'OK'
       Default = True
@@ -214,10 +214,10 @@ object ClusterForm: TClusterForm
       TabOrder = 0
     end
     object CancelButton: TButton
-      Left = 199
-      Height = 30
+      Left = 156
+      Height = 25
       Top = 8
-      Width = 94
+      Width = 75
       Align = alRight
       Cancel = True
       Caption = 'Cancel'

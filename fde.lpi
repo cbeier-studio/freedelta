@@ -69,7 +69,7 @@
         <PackageName Value="LCL"/>
       </Item8>
     </RequiredPackages>
-    <Units Count="18">
+    <Units Count="17">
       <Unit0>
         <Filename Value="fde.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -161,42 +161,37 @@
         <IsPartOfProject Value="True"/>
       </Unit12>
       <Unit13>
-        <Filename Value="nexus.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Nexus"/>
-      </Unit13>
-      <Unit14>
         <Filename Value="kstates.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="KeyStatesForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="KStates"/>
-      </Unit14>
-      <Unit15>
+      </Unit13>
+      <Unit14>
         <Filename Value="phylogen.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="PhyloForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Phylogen"/>
-      </Unit15>
-      <Unit16>
+      </Unit14>
+      <Unit15>
         <Filename Value="script.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="ScriptForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Script"/>
-      </Unit16>
-      <Unit17>
+      </Unit15>
+      <Unit16>
         <Filename Value="toint.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="IntKeyForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Toint"/>
-      </Unit17>
+      </Unit16>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

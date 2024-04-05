@@ -342,6 +342,11 @@ msgctxt "chars.strnexusfilter"
 msgid "Nexus data files|*.nex"
 msgstr ""
 
+#: chars.strnoinnercomments
+msgctxt "chars.strnoinnercomments"
+msgid "Unsupported inner comments"
+msgstr ""
+
 #: chars.strnotexecute
 #, object-pascal-format
 msgctxt "chars.strnotexecute"
@@ -853,6 +858,11 @@ msgstr ""
 #: cluster.strnexusfilter
 msgctxt "cluster.strnexusfilter"
 msgid "Nexus data files|*.nex"
+msgstr ""
+
+#: cluster.strnoinnercomments
+msgctxt "cluster.strnoinnercomments"
+msgid "Unsupported inner comments"
 msgstr ""
 
 #: cluster.strnotexecute
@@ -1368,6 +1378,11 @@ msgctxt "kstates.strnexusfilter"
 msgid "Nexus data files|*.nex"
 msgstr ""
 
+#: kstates.strnoinnercomments
+msgctxt "kstates.strnoinnercomments"
+msgid "Unsupported inner comments"
+msgstr ""
+
 #: kstates.strnotexecute
 #, object-pascal-format
 msgctxt "kstates.strnotexecute"
@@ -1879,6 +1894,11 @@ msgstr ""
 #: main.strnexusfilter
 msgctxt "main.strnexusfilter"
 msgid "Nexus data files|*.nex"
+msgstr ""
+
+#: main.strnoinnercomments
+msgctxt "main.strnoinnercomments"
+msgid "Unsupported inner comments"
 msgstr ""
 
 #: main.strnotexecute
@@ -2394,6 +2414,11 @@ msgctxt "prepare.strnexusfilter"
 msgid "Nexus data files|*.nex"
 msgstr ""
 
+#: prepare.strnoinnercomments
+msgctxt "prepare.strnoinnercomments"
+msgid "Unsupported inner comments"
+msgstr ""
+
 #: prepare.strnotexecute
 #, object-pascal-format
 msgctxt "prepare.strnotexecute"
@@ -2905,6 +2930,11 @@ msgstr ""
 #: script.strnexusfilter
 msgctxt "script.strnexusfilter"
 msgid "Nexus data files|*.nex"
+msgstr ""
+
+#: script.strnoinnercomments
+msgctxt "script.strnoinnercomments"
+msgid "Unsupported inner comments"
 msgstr ""
 
 #: script.strnotexecute
@@ -3652,14 +3682,6 @@ msgstr ""
 
 #: tmainform.editdeleteitem.hint
 msgid "Delete selected item"
-msgstr ""
-
-#: tmainform.editimagesitem.caption
-msgid "Images"
-msgstr ""
-
-#: tmainform.editimagesitem.hint
-msgid "Display images of characters or taxa"
 msgstr ""
 
 #: tmainform.editinsertcharacteritem.caption
@@ -4668,6 +4690,11 @@ msgctxt "toint.strnexusfilter"
 msgid "Nexus data files|*.nex"
 msgstr ""
 
+#: toint.strnoinnercomments
+msgctxt "toint.strnoinnercomments"
+msgid "Unsupported inner comments"
+msgstr ""
+
 #: toint.strnotexecute
 #, object-pascal-format
 msgctxt "toint.strnotexecute"
@@ -5181,6 +5208,11 @@ msgctxt "tokey.strnexusfilter"
 msgid "Nexus data files|*.nex"
 msgstr ""
 
+#: tokey.strnoinnercomments
+msgctxt "tokey.strnoinnercomments"
+msgid "Unsupported inner comments"
+msgstr ""
+
 #: tokey.strnotexecute
 #, object-pascal-format
 msgctxt "tokey.strnotexecute"
@@ -5692,6 +5724,11 @@ msgstr ""
 #: tonat.strnexusfilter
 msgctxt "tonat.strnexusfilter"
 msgid "Nexus data files|*.nex"
+msgstr ""
+
+#: tonat.strnoinnercomments
+msgctxt "tonat.strnoinnercomments"
+msgid "Unsupported inner comments"
 msgstr ""
 
 #: tonat.strnotexecute
@@ -6418,6 +6455,11 @@ msgstr ""
 #: viewer.strnexusfilter
 msgctxt "viewer.strnexusfilter"
 msgid "Nexus data files|*.nex"
+msgstr ""
+
+#: viewer.strnoinnercomments
+msgctxt "viewer.strnoinnercomments"
+msgid "Unsupported inner comments"
 msgstr ""
 
 #: viewer.strnotexecute

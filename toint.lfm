@@ -1,14 +1,14 @@
 object IntKeyForm: TIntKeyForm
   Left = 498
-  Height = 307
+  Height = 249
   Top = 141
-  Width = 400
+  Width = 363
   BorderStyle = bsDialog
   Caption = 'INTKEY Directives'
-  ClientHeight = 307
-  ClientWidth = 400
-  DesignTimePPI = 120
-  Font.Height = -15
+  ChildSizing.HorizontalSpacing = 8
+  ClientHeight = 249
+  ClientWidth = 363
+  Font.Height = -12
   Icon.Data = {
     BE1000000000010001002020000001002000A810000016000000280000002000
     0000400000000100200000000000001000006400000064000000000000000000
@@ -150,41 +150,41 @@ object IntKeyForm: TIntKeyForm
   OnDestroy = FormDestroy
   Position = poMainFormCenter
   object LabelHeading: TLabel
-    Left = 14
-    Height = 20
-    Top = 18
-    Width = 60
+    Left = 16
+    Height = 15
+    Top = 14
+    Width = 48
     Caption = 'Heading:'
     ParentColor = False
   end
   object EditHeading: TEdit
-    Left = 90
-    Height = 28
-    Top = 14
-    Width = 300
+    Left = 77
+    Height = 23
+    Top = 11
+    Width = 272
     TabOrder = 0
   end
   object LabelCharacterReliabilities: TLabel
-    Left = 14
-    Height = 20
-    Top = 50
-    Width = 147
+    Left = 16
+    Height = 15
+    Top = 41
+    Width = 116
     Caption = 'Character Reliabilities:'
     ParentColor = False
   end
   object LabelRBASE: TLabel
-    Left = 14
-    Height = 20
-    Top = 184
-    Width = 47
+    Left = 16
+    Height = 15
+    Top = 149
+    Width = 37
     Caption = 'RBASE:'
     ParentColor = False
   end
   object FloatSpinEditRBASE: TFloatSpinEditEx
-    Left = 266
-    Height = 28
-    Top = 180
-    Width = 124
+    Left = 216
+    Height = 23
+    Top = 146
+    Width = 133
     MaxLength = 0
     TabOrder = 5
     MaxValue = 5
@@ -192,48 +192,48 @@ object IntKeyForm: TIntKeyForm
     Value = 1.1
   end
   object LabelVARYWT: TLabel
-    Left = 14
-    Height = 20
-    Top = 217
-    Width = 60
+    Left = 16
+    Height = 15
+    Top = 176
+    Width = 48
     Caption = 'VARYWT:'
     ParentColor = False
   end
   object FloatSpinEditVARYWT: TFloatSpinEditEx
-    Left = 264
-    Height = 28
-    Top = 213
-    Width = 126
+    Left = 216
+    Height = 23
+    Top = 173
+    Width = 133
     MaxLength = 0
     TabOrder = 6
     MaxValue = 1
     Value = 1
   end
   object LabelIncludeItems: TLabel
-    Left = 14
-    Height = 20
-    Top = 84
-    Width = 91
+    Left = 16
+    Height = 15
+    Top = 68
+    Width = 74
     Caption = 'Include Items:'
     ParentColor = False
   end
   object LabelIncludeCharacters: TLabel
-    Left = 14
-    Height = 20
-    Top = 113
-    Width = 124
+    Left = 16
+    Height = 15
+    Top = 95
+    Width = 101
     Caption = 'Include Characters:'
     ParentColor = False
   end
   object DirectoryEditImagePath: TDirectoryEdit
-    Left = 176
-    Height = 28
-    Top = 143
-    Width = 214
+    Left = 146
+    Height = 23
+    Top = 119
+    Width = 203
     Directory = 'images'
     DialogTitle = 'Select image path'
     ShowHidden = False
-    ButtonWidth = 29
+    ButtonWidth = 23
     NumGlyphs = 1
     Images = MainForm.ImageList1
     ImageIndex = 1
@@ -244,44 +244,45 @@ object IntKeyForm: TIntKeyForm
     Text = 'images'
   end
   object LabelImagePath: TLabel
-    Left = 14
-    Height = 20
-    Top = 143
-    Width = 77
+    Left = 16
+    Height = 15
+    Top = 122
+    Width = 63
     Caption = 'Image Path:'
     ParentColor = False
   end
   object PanelButtons: TPanel
     Left = 0
-    Height = 46
-    Top = 261
-    Width = 400
+    Height = 41
+    Top = 208
+    Width = 363
     Align = alBottom
+    AutoSize = True
     BevelOuter = bvNone
     ChildSizing.LeftRightSpacing = 16
     ChildSizing.TopBottomSpacing = 8
     ChildSizing.HorizontalSpacing = 8
-    ClientHeight = 46
-    ClientWidth = 400
+    ClientHeight = 41
+    ClientWidth = 363
     Color = 16448250
     ParentBackground = False
     ParentColor = False
     TabOrder = 7
     object OKButton: TButton
-      Left = 225
-      Height = 30
+      Left = 218
+      Height = 25
       Top = 8
-      Width = 76
+      Width = 61
       Align = alRight
       Caption = 'OK'
       ModalResult = 1
       TabOrder = 0
     end
     object CancelButton: TButton
-      Left = 309
-      Height = 30
+      Left = 287
+      Height = 25
       Top = 8
-      Width = 75
+      Width = 60
       Align = alRight
       Caption = 'Cancel'
       ModalResult = 2
@@ -289,11 +290,11 @@ object IntKeyForm: TIntKeyForm
     end
   end
   object EditCharacterReliabilities: TEditButton
-    Left = 176
-    Height = 28
-    Top = 48
-    Width = 214
-    ButtonWidth = 29
+    Left = 146
+    Height = 23
+    Top = 38
+    Width = 203
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
@@ -305,11 +306,11 @@ object IntKeyForm: TIntKeyForm
     TabOrder = 1
   end
   object EditIncludeItems: TEditButton
-    Left = 176
-    Height = 28
-    Top = 80
-    Width = 214
-    ButtonWidth = 29
+    Left = 146
+    Height = 23
+    Top = 65
+    Width = 203
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
@@ -321,11 +322,11 @@ object IntKeyForm: TIntKeyForm
     TabOrder = 2
   end
   object EditIncludeCharacters: TEditButton
-    Left = 176
-    Height = 28
-    Top = 112
-    Width = 214
-    ButtonWidth = 29
+    Left = 146
+    Height = 23
+    Top = 92
+    Width = 203
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20

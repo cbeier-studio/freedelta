@@ -951,6 +951,8 @@ begin
   {$ELSE}
    Result := SysUtils.GetEnvironmentVariable('LANG');
   {$ENDIF}
+end;
+
 procedure CleanData(const filename: string);
 var
   infile, outfile: TextFile;

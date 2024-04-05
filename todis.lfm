@@ -1,13 +1,12 @@
 object DistForm: TDistForm
   Left = 503
-  Height = 239
+  Height = 196
   Top = 284
-  Width = 450
+  Width = 360
   BorderStyle = bsDialog
   Caption = 'DIST Directives'
-  ClientHeight = 239
-  ClientWidth = 450
-  DesignTimePPI = 120
+  ClientHeight = 196
+  ClientWidth = 360
   Icon.Data = {
     BE1000000000010001002020000001002000A810000016000000280000002000
     0000400000000100200000000000001000006400000064000000000000000000
@@ -149,88 +148,89 @@ object DistForm: TDistForm
   OnDestroy = FormDestroy
   Position = poMainFormCenter
   object CheckBoxMatchOverlap: TCheckBox
-    Left = 18
-    Height = 24
-    Top = 11
-    Width = 118
+    Left = 14
+    Height = 19
+    Top = 9
+    Width = 96
     Alignment = taLeftJustify
     Caption = 'Match Overlap'
     TabOrder = 0
   end
   object SpinEditMinimumNumberOfComparisons: TSpinEditEx
-    Left = 272
-    Height = 28
-    Top = 38
-    Width = 164
+    Left = 218
+    Height = 23
+    Top = 30
+    Width = 131
     MaxLength = 0
     TabOrder = 1
     NullValue = 0
     Value = 0
   end
   object LabelMinimumNumberOfComparisons: TLabel
-    Left = 18
-    Height = 20
-    Top = 42
-    Width = 232
+    Left = 14
+    Height = 15
+    Top = 34
+    Width = 190
     Caption = 'Minimum Number of Comparisons:'
     ParentColor = False
   end
   object CheckBoxPHYLIPFormat: TCheckBox
-    Left = 18
-    Height = 24
-    Top = 70
-    Width = 121
+    Left = 14
+    Height = 19
+    Top = 56
+    Width = 101
     Alignment = taLeftJustify
     Caption = 'PHYLIP Format:'
     TabOrder = 2
   end
   object LabelExcludeItems: TLabel
-    Left = 18
-    Height = 20
-    Top = 106
-    Width = 94
+    Left = 14
+    Height = 15
+    Top = 85
+    Width = 76
     Caption = 'Exclude Items:'
     ParentColor = False
   end
   object LabelExcludeCharacters: TLabel
-    Left = 18
-    Height = 20
-    Top = 146
-    Width = 127
+    Left = 14
+    Height = 15
+    Top = 117
+    Width = 103
     Caption = 'Exclude Characters:'
     ParentColor = False
   end
   object PanelButtons: TPanel
     Left = 0
-    Height = 46
-    Top = 193
-    Width = 450
+    Height = 41
+    Top = 155
+    Width = 360
     Align = alBottom
+    AutoSize = True
     BevelOuter = bvNone
     ChildSizing.LeftRightSpacing = 16
     ChildSizing.TopBottomSpacing = 8
     ChildSizing.HorizontalSpacing = 8
-    ClientHeight = 46
-    ClientWidth = 450
+    ClientHeight = 41
+    ClientWidth = 360
     Color = 16448250
     ParentBackground = False
     ParentColor = False
     TabOrder = 5
     object OKButton: TButton
-      Left = 238
-      Height = 30
+      Left = 186
+      Height = 25
       Top = 8
-      Width = 94
+      Width = 75
       Align = alRight
       Caption = 'OK'
       ModalResult = 1
       TabOrder = 0
     end
     object CancelButton: TButton
-      Left = 340
-      Height = 30
+      Left = 269
+      Height = 25
       Top = 8
-      Width = 94
+      Width = 75
       Align = alRight
       Caption = 'Cancel'
       ModalResult = 2
@@ -238,11 +238,11 @@ object DistForm: TDistForm
     end
   end
   object EditExcludeItems: TEditButton
-    Left = 162
-    Height = 28
-    Top = 101
-    Width = 274
-    ButtonWidth = 29
+    Left = 130
+    Height = 23
+    Top = 81
+    Width = 219
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
@@ -254,11 +254,11 @@ object DistForm: TDistForm
     TabOrder = 3
   end
   object EditExcludeCharacters: TEditButton
-    Left = 162
-    Height = 28
-    Top = 142
-    Width = 274
-    ButtonWidth = 29
+    Left = 130
+    Height = 23
+    Top = 114
+    Width = 219
+    ButtonWidth = 23
     Images = MainForm.ImageList1
     ImageIndex = 5
     ImageWidth = 20
