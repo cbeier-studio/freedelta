@@ -9,7 +9,6 @@ object AboutBox: TAboutBox
   ClientWidth = 448
   Color = clBtnFace
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
   OnShow = FormShow
   Position = poMainFormCenter
   object Panel1: TPanel
@@ -47,8 +46,6 @@ object AboutBox: TAboutBox
       Width = 86
       Caption = 'Free Delta Editor'
       Font.Height = -11
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
@@ -103,8 +100,6 @@ object AboutBox: TAboutBox
       Font.CharSet = ANSI_CHARSET
       Font.Color = clBlue
       Font.Height = -11
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
       Font.Style = [fsUnderline]
       ParentColor = False
       ParentFont = False

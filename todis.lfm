@@ -187,7 +187,7 @@ object DistForm: TDistForm
     Left = 14
     Height = 15
     Top = 85
-    Width = 76
+    Width = 75
     Caption = 'Exclude Items:'
     ParentColor = False
   end
@@ -195,7 +195,7 @@ object DistForm: TDistForm
     Left = 14
     Height = 15
     Top = 117
-    Width = 103
+    Width = 102
     Caption = 'Exclude Characters:'
     ParentColor = False
   end
@@ -243,7 +243,7 @@ object DistForm: TDistForm
     Top = 81
     Width = 219
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -259,7 +259,7 @@ object DistForm: TDistForm
     Top = 114
     Width = 219
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0

@@ -157,7 +157,7 @@ object ScriptForm: TScriptForm
     Top = 0
     Width = 561
     AutoSize = True
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImagesWidth = 20
     Indent = 4
     TabOrder = 0
@@ -192,7 +192,7 @@ object ScriptForm: TScriptForm
       ShowHint = True
     end
     object RunButton: TToolButton
-      Left = 112
+      Left = 116
       Hint = 'Run script'
       Top = 2
       DropdownMenu = RunMenu
@@ -204,7 +204,7 @@ object ScriptForm: TScriptForm
       Style = tbsButtonDrop
     end
     object CopyButton: TToolButton
-      Left = 82
+      Left = 84
       Hint = 'Copy text'
       Top = 2
       ImageIndex = 16
@@ -214,7 +214,7 @@ object ScriptForm: TScriptForm
       ShowHint = True
     end
     object ReturnButton: TToolButton
-      Left = 152
+      Left = 158
       Hint = 'Close script'
       Top = 2
       ImageIndex = 20
@@ -231,14 +231,14 @@ object ScriptForm: TScriptForm
       Style = tbsSeparator
     end
     object ToolButton2: TToolButton
-      Left = 106
+      Left = 108
       Height = 22
       Top = 2
       Caption = 'ToolButton2'
       Style = tbsSeparator
     end
     object ToolButton3: TToolButton
-      Left = 146
+      Left = 150
       Height = 22
       Top = 2
       Caption = 'ToolButton3'

@@ -195,7 +195,7 @@ object IntKeyForm: TIntKeyForm
     Left = 16
     Height = 15
     Top = 176
-    Width = 48
+    Width = 49
     Caption = 'VARYWT:'
     ParentColor = False
   end
@@ -235,7 +235,7 @@ object IntKeyForm: TIntKeyForm
     ShowHidden = False
     ButtonWidth = 23
     NumGlyphs = 1
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 1
     ImageWidth = 20
     MaxLength = 0
@@ -295,7 +295,7 @@ object IntKeyForm: TIntKeyForm
     Top = 38
     Width = 203
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -311,7 +311,7 @@ object IntKeyForm: TIntKeyForm
     Top = 65
     Width = 203
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -327,7 +327,7 @@ object IntKeyForm: TIntKeyForm
     Top = 92
     Width = 203
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0

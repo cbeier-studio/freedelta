@@ -499,7 +499,7 @@ type
     FindDialog: TFindDialog;
     HelpMenuItem: TMenuItem;
     EditScriptItem: TMenuItem;
-    ImageList1: TImageList;
+    ImageList: TImageList;
     MatrixParsimonyItemTNT: TMenuItem;
     MatrixParsimonyItemPAUP: TMenuItem;
     ExportTextItem: TMenuItem;
@@ -603,7 +603,6 @@ type
     HelpAboutItem: TMenuItem;
     HelpMenu: TMenuItem;
     HistoryFiles: THistoryFiles;
-    ImageList: TImageList;
     MainMenu: TMainMenu;
     LanguagePortugueseItem: TMenuItem;
     LanguageMenu: TMenuItem;

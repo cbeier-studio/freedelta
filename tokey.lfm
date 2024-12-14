@@ -184,7 +184,7 @@ object KeyForm: TKeyForm
     Left = 236
     Height = 19
     Top = 64
-    Width = 101
+    Width = 102
     Alignment = taLeftJustify
     Caption = 'No Tabular Key:'
     Checked = True
@@ -214,7 +214,7 @@ object KeyForm: TKeyForm
     Left = 14
     Height = 15
     Top = 121
-    Width = 145
+    Width = 146
     Caption = 'Treat Characters as Variable:'
     ParentColor = False
   end
@@ -303,7 +303,7 @@ object KeyForm: TKeyForm
     Left = 14
     Height = 15
     Top = 322
-    Width = 48
+    Width = 49
     Caption = 'VARYWT:'
     ParentColor = False
   end
@@ -413,7 +413,7 @@ object KeyForm: TKeyForm
     Top = 118
     Width = 150
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -429,7 +429,7 @@ object KeyForm: TKeyForm
     Top = 147
     Width = 150
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -445,7 +445,7 @@ object KeyForm: TKeyForm
     Top = 176
     Width = 150
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -461,7 +461,7 @@ object KeyForm: TKeyForm
     Top = 205
     Width = 150
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 8
     ImageWidth = 20
     MaxLength = 0
@@ -477,7 +477,7 @@ object KeyForm: TKeyForm
     Top = 350
     Width = 150
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -493,7 +493,7 @@ object KeyForm: TKeyForm
     Top = 379
     Width = 150
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0

@@ -151,7 +151,7 @@ object PhyloForm: TPhyloForm
     Left = 14
     Height = 15
     Top = 53
-    Width = 76
+    Width = 75
     Caption = 'Exclude Items:'
     ParentColor = False
   end
@@ -159,7 +159,7 @@ object PhyloForm: TPhyloForm
     Left = 14
     Height = 15
     Top = 84
-    Width = 103
+    Width = 102
     Caption = 'Exclude Characters:'
     ParentColor = False
   end
@@ -215,7 +215,7 @@ object PhyloForm: TPhyloForm
     Top = 16
     Width = 220
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 8
     ImageWidth = 20
     MaxLength = 0
@@ -231,7 +231,7 @@ object PhyloForm: TPhyloForm
     Top = 49
     Width = 220
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
@@ -247,7 +247,7 @@ object PhyloForm: TPhyloForm
     Top = 83
     Width = 220
     ButtonWidth = 23
-    Images = MainForm.ImageList1
+    Images = MainForm.ImageList
     ImageIndex = 5
     ImageWidth = 20
     MaxLength = 0
