@@ -538,6 +538,11 @@ msgctxt "chars.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
 
+#: chars.strwriteerror
+msgctxt "chars.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
+
 #: chars.strxlsfilter
 msgctxt "chars.strxlsfilter"
 msgid "Excel 97-2003 files|*.xls"
@@ -1055,6 +1060,11 @@ msgstr "Esta opción está disponible sólo en MS-Windows."
 msgctxt "cluster.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
+
+#: cluster.strwriteerror
+msgctxt "cluster.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
 
 #: cluster.strxlsfilter
 msgctxt "cluster.strxlsfilter"
@@ -1574,6 +1584,11 @@ msgctxt "kstates.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
 
+#: kstates.strwriteerror
+msgctxt "kstates.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
+
 #: kstates.strxlsfilter
 msgctxt "kstates.strxlsfilter"
 msgid "Excel 97-2003 files|*.xls"
@@ -2091,6 +2106,11 @@ msgstr "Esta opción está disponible sólo en MS-Windows."
 msgctxt "main.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
+
+#: main.strwriteerror
+msgctxt "main.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
 
 #: main.strxlsfilter
 msgctxt "main.strxlsfilter"
@@ -2610,6 +2630,11 @@ msgctxt "prepare.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
 
+#: prepare.strwriteerror
+msgctxt "prepare.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
+
 #: prepare.strxlsfilter
 msgctxt "prepare.strxlsfilter"
 msgid "Excel 97-2003 files|*.xls"
@@ -3128,6 +3153,11 @@ msgctxt "script.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
 
+#: script.strwriteerror
+msgctxt "script.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
+
 #: script.strxlsfilter
 msgctxt "script.strxlsfilter"
 msgid "Excel 97-2003 files|*.xls"
@@ -3152,8 +3182,8 @@ msgid "Compiler:"
 msgstr "Compilador:"
 
 #: taboutbox.copyright.caption
-msgid "Copyright © 2000-2023 Mauro J. Cavalcanti"
-msgstr "Copyright © 2000-2023 Mauro J. Cavalcanti"
+msgid "Copyright © 2000-2024 Mauro J. Cavalcanti"
+msgstr "Copyright © 2000-2024 Mauro J. Cavalcanti"
 
 #: taboutbox.ide.caption
 msgid "IDE:"
@@ -3788,9 +3818,21 @@ msgstr "DELTA..."
 msgid "Save data in DELTA format"
 msgstr "Guardar datos en formato DELTA"
 
+#: tmainform.exportsliksitem.caption
+msgid "SLIKS"
+msgstr "SLIKS"
+
+#: tmainform.exportsliksitem.hint
+msgid "Save data in SLIKS format"
+msgstr "Guardar datos en formato SLIKS"
+
 #: tmainform.exportspreadsheetitem.caption
 msgid "Spreadsheet..."
 msgstr "Hoja de cálculo..."
+
+#: tmainform.exportspreadsheetitem.hint
+msgid "Save data in Excel format"
+msgstr ""
 
 #: tmainform.exporttextitem.caption
 msgctxt "tmainform.exporttextitem.caption"
@@ -4898,6 +4940,11 @@ msgctxt "toint.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
 
+#: toint.strwriteerror
+msgctxt "toint.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
+
 #: toint.strxlsfilter
 msgctxt "toint.strxlsfilter"
 msgid "Excel 97-2003 files|*.xls"
@@ -5416,6 +5463,11 @@ msgctxt "tokey.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
 
+#: tokey.strwriteerror
+msgctxt "tokey.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
+
 #: tokey.strxlsfilter
 msgctxt "tokey.strxlsfilter"
 msgid "Excel 97-2003 files|*.xls"
@@ -5933,6 +5985,11 @@ msgstr "Esta opción está disponible sólo en MS-Windows."
 msgctxt "tonat.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
+
+#: tonat.strwriteerror
+msgctxt "tonat.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
 
 #: tonat.strxlsfilter
 msgctxt "tonat.strxlsfilter"
@@ -6664,6 +6721,11 @@ msgstr "Esta opción está disponible sólo en MS-Windows."
 msgctxt "viewer.strwpgma"
 msgid "Weighted linkage (WPGMA)"
 msgstr "Varillaje ponderado (WPGMA)"
+
+#: viewer.strwriteerror
+msgctxt "viewer.strwriteerror"
+msgid "Error writing file %s."
+msgstr "Error al escribir el archivo %s."
 
 #: viewer.strxlsfilter
 msgctxt "viewer.strxlsfilter"
