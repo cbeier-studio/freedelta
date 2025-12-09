@@ -499,6 +499,9 @@
 {                                   matrix view.                                }
 {                                 - Removed call to CleanData procedure to keep }
 {                                   inner comments when importing DELTA datasets}
+{ Version 4.30, 10 Dec, 2025      - Fixed a bug which sometimes caused the      }
+{                                   export to SLIKS format procedure to truncate}
+{                                   the list of character states.               }
 {===============================================================================}
 unit Main;
 
@@ -4203,54 +4206,48 @@ begin
   begin
     MessageDlg(strError, Format(strReadError, ['CHARS']), mtError, [mbOK], 0);
     exit;
-  end {else ShowMessage('Characters read')};
+  end;
 
   ret_val := NewDataset.ReadItems('items.new');
   if (ret_val < 0) then
   begin
     MessageDlg(strError, Format(strReadError, ['ITEMS']), mtError, [mbOK], 0);
     exit;
-  end {else ShowMessage('Items read')};
+  end;
 
   ret_val := NewDataset.WriteSpecs('specs.new');
   if (ret_val < 0) then
   begin
     MessageDlg(strError, Format(strWriteError, ['SPECS']), mtError, [mbOK], 0);
     exit;
-  end {else ShowMessage('Specifications written')};
+  end;
 
   ret_val := NewDataset.ReadSpecs('specs.new', typeDirective);
   if (ret_val < 0) then
   begin
     MessageDlg(strError, Format(strReadError, ['SPECS']), mtError, [mbOK], 0);
     exit;
-  end {else ShowMessage('Types read')};
-
-  //NewDataset := Delta.ReadDelta('chars.new', 'items.new', 'specs.new');
-  //NewDataset := Delta.ReadDelta('chars', 'items', 'specs');
+  end;
 
   { Translate into SLIKS format }
   AssignFile(outfile, 'data.js');
   Rewrite(outfile);
   WriteLn(outfile);
-  WriteLn(outfile, 'var dataset = "<h2>', Dataset.Heading, '</h2>"');
+  WriteLn(outfile, 'var dataset = "<h2>', NewDataset.Heading, '</h2>"');
 
   { Output characters list }
   WriteLn(outfile);
   WriteLn(outfile, 'var chars = [ [ "Latin Name"],');
+
   for i := 0 to Length(NewDataset.CharacterList) - 1 do
   begin
     Write(outfile, #9, '[ "', NewDataset.CharacterList[i].charName, '", ');
     for j := 0 to NewDataset.CharacterList[i].charStates.Count - 1 do
     begin
-      try
-        if (j < NewDataset.CharacterList[i].charStates.Count - 1) then
-          Write(outfile, '"', NewDataset.CharacterList[i].charStates[j], '", ')
-        else
-          Write(outfile, '"', Dataset.CharacterList[i].charStates[j], '"');
-      except
-        continue;
-      end;
+      if (j < NewDataset.CharacterList[i].charStates.Count - 1) then
+        Write(outfile, '"', NewDataset.CharacterList[i].charStates[j], '", ')
+      else
+        Write(outfile, '"', NewDataset.CharacterList[i].charStates[j], '"');
     end;
     if (i < Length(NewDataset.CharacterList) - 1) then
       Write(outfile, '],')

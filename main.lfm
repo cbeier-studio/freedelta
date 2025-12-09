@@ -32,9 +32,9 @@ object MainForm: TMainForm
     Height = 463
     Top = 24
     Width = 800
-    ActivePage = MatrixTab
+    ActivePage = ListTab
     Align = alClient
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     Visible = False
     OnChange = PageControlChange
